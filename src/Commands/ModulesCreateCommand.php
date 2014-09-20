@@ -59,13 +59,16 @@ class ModulesCreateCommand extends AbstractCommand {
 			$this->app['files']->put($modulePath . '/routes.php', $routes);
 
 			// Create some resource directories
-			$this->app['files']->makeDirectory($modulePath . '/assets', 0755);
-			$this->app['files']->makeDirectory($modulePath . '/config', 0755);
-			$this->app['files']->makeDirectory($modulePath . '/controllers', 0755);
-			$this->app['files']->makeDirectory($modulePath . '/lang', 0755);
-			$this->app['files']->makeDirectory($modulePath . '/models', 0755);
-			$this->app['files']->makeDirectory($modulePath . '/migrations', 0755);
-			$this->app['files']->makeDirectory($modulePath . '/views', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Assets', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Config', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Controllers', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Lang', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Models', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Migrations', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Views', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Request', 0755);
+			$this->app['files']->makeDirectory($modulePath . '/Repository', 0755);
+
 
 			// Autoload classes
 			$this->dumpAutoload();
