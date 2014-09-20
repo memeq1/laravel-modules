@@ -108,8 +108,8 @@ class Finder {
 						// Check if dir contains a module definition file
 						if ($this->app['files']->exists($directory . '/module.json'))
 						{
-							$name                 = pathinfo($directory, PATHINFO_BASENAME);
-							$this->modules[$name] = new Module(strtolower($name), $directory, null, $this->app, $path);
+							$name                 = strtolower(pathinfo($directory, PATHINFO_BASENAME));
+							$this->modules[$name] = new Module(($name, $directory, null, $this->app, $path);
 						}
 					}
 				}
